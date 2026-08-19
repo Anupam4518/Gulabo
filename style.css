@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:
+        radial-gradient(circle at 50% 0%,#74145e,transparent 35%),
+        linear-gradient(135deg,#10000f,#320027,#130012);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ================= PASSWORD SCREEN ================= */
+
+#lockScreen{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:
+        radial-gradient(circle at top,#78155f,#26001f 50%,#090009);
+}
+
+.lock-card{
+    width:100%;
+    max-width:430px;
+    padding:40px 30px;
+    text-align:center;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(20px);
+    box-shadow:0 20px 70px rgba(0,0,0,.5);
+}
+
+.lock-icon{
+    font-size:65px;
+    margin-bottom:10px;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.1)}
+}
+
+.lock-card h1{
+    font-family:'Great Vibes',cursive;
+    font-size:52px;
+    color:#ff9edb;
+    margin-bottom:15px;
+}
+
+.lock-card p{
+    color:#ddd;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+#passwordInput{
+    width:100%;
+    padding:15px 20px;
+    border-radius:50px;
+    border:1px solid rgba(255,255,255,.2);
+    outline:none;
+    background:rgba(255,255,255,.1);
+    color:white;
+    text-align:center;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+#passwordInput::placeholder{
+    color:#bbb;
+}
+
+#passwordError{
+    color:#ff7fc9;
+    min-height:25px;
+}
+
+/* ================= MAIN WEBSITE ================= */
+
+#mainWebsite{
+    display:none;
+}
+
+/* ================= MUSIC ================= */
+
+.music-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    z-index:5000;
+}
+
+/* ================= STARS ================= */
+
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:white;
+    opacity:.7;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2}
+    to{opacity:1}
+}
+
+/* ================= HEARTS ================= */
+
+.heart{
+    position:fixed;
+    bottom:-40px;
+    pointer-events:none;
+    z-index:1;
+    animation:floatHeart linear forwards;
+}
+
+@keyframes floatHeart{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+    15%{opacity:1}
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.pre-title{
+    color:#ffc1e5;
+    font-size:13px;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(75px,15vw,150px);
+    line-height:1;
+    text-shadow:
+        0 0 10px #ff5db9,
+        0 0 30px #ff299e,
+        0 0 70px #ff299e;
+}
+
+.hero h2{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(50px,10vw,90px);
+    color:#ff9ed7;
+}
+
+.hero p{
+    max-width:650px;
+    margin:25px auto;
+    line-height:1.8;
+    color:#eee;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    border:none;
+    padding:15px 30px;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff299e,#994dcc);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 0 25px rgba(255,40,160,.4);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 40px rgba(255,40,160,.7);
+}
+
+/* ================= COUNTDOWN ================= */
+
+.countdown-title{
+    color:#ffc2e5;
+    letter-spacing:2px;
+    font-size:14px;
+    margin-top:25px;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:18px 0 30px;
+}
+
+.time-box{
+    width:90px;
+    padding:14px 5px;
+    border-radius:18px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+}
+
+.time-box span{
+    display:block;
+    font-size:30px;
+    font-weight:600;
+}
+
+.time-box small{
+    font-size:10px;
+    color:#ffabd9;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    position:relative;
+    z-index:2;
+    max-width:1050px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.section-label{
+    text-align:center;
+    color:#ff9ed7;
+    font-size:13px;
+    letter-spacing:4px;
+}
+
+.section-title{
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    margin:10px 0 40px;
+}
+
+/* ================= GLASS CARD ================= */
+
+.glass{
+    max-width:800px;
+    margin:auto;
+    padding:40px;
+    border-radius:30px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.glass p{
+    line-height:2;
+    color:#eee;
+}
+
+/* ================= LETTER LOCK ================= */
+
+#actualLetter{
+    display:none;
+}
+
+#letterLocked{
+    text-align:center;
+}
+
+.locked-icon{
+    font-size:65px;
+    margin-bottom:15px;
+}
+
+#letterCountdown{
+    color:#ffaddb;
+    font-size:25px;
+    font-weight:600;
+    margin-top:20px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.photo{
+    height:360px;
+    overflow:hidden;
+    border-radius:25px;
+    border:2px solid rgba(255,140,210,.25);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.photo:hover img{
+    transform:scale(1.08);
+}
+
+/* ================= REASONS ================= */
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.reason{
+    text-align:center;
+    padding:30px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    transition:.4s;
+}
+
+.reason:hover{
+    transform:translateY(-8px);
+}
+
+.reason-icon{
+    font-size:45px;
+}
+
+.reason h3{
+    color:#ffabd9;
+    margin:15px 0 10px;
+}
+
+.reason p{
+    color:#ddd;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* ================= SURPRISE ================= */
+
+.surprise{
+    text-align:center;
+}
+
+.cake{
+    font-size:90px;
+    animation:bounce 2s infinite;
+    margin:20px 0;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+
+#finalSurprise{
+    display:none;
+    margin-top:30px;
+    animation:reveal 1s ease;
+}
+
+@keyframes reveal{
+    from{
+        opacity:0;
+        transform:scale(.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.final-title{
+    font-family:'Great Vibes',cursive;
+    color:#ffabd9;
+    font-size:55px;
+    line-height:1.5;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:50px 20px;
+    color:#aaa;
+}
+
+footer span{
+    color:#ff69bd;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .section-title{
+        font-size:52px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .photo{
+        height:420px;
+    }
+
+    .reasons{
+        grid-template-columns:1fr;
+    }
+
+    .glass{
+        padding:25px 20px;
+    }
+
+    .time-box{
+        width:72px;
+    }
+
+    .time-box span{
+        font-size:24px;
+    }
+
+    .final-title{
+        font-size:42px;
+    }
+}

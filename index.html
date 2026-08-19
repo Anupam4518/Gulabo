@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Gulabo ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
+
+<div id="lockScreen">
+
+    <div class="lock-card">
+
+        <div class="lock-icon">🔐</div>
+
+        <h1>Private Surprise</h1>
+
+        <p>
+            This website is specially made for
+            <br>
+            <b>Jasling Sharma</b>
+            <br>
+            My Gulabo 🌹❤️
+        </p>
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter password"
+            autocomplete="off"
+        >
+
+        <button class="btn" onclick="unlockWebsite()">
+            Unlock My Surprise ❤️
+        </button>
+
+        <p id="passwordError"></p>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<div id="mainWebsite">
+
+    <!-- MUSIC -->
+
+    <audio id="music" loop>
+        <source src="1.mp3" type="audio/mp3">
+    </audio>
+
+    <button
+        class="music-btn"
+        id="musicBtn"
+        onclick="toggleMusic()">
+        🎵
+    </button>
+
+
+    <!-- STARS -->
+
+    <div class="stars" id="stars"></div>
+
+
+    <!-- =================================================
+         HERO
+    ================================================= -->
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <div class="pre-title">
+                ✨ A SECRET SURPRISE FOR YOU ✨
+            </div>
+
+            <h1>
+                Happy Birthday
+            </h1>
+
+            <h2>
+                Gulabo ❤️
+            </h2>
+
+            <p>
+                To my beautiful
+                <b>Jasling Sharma</b>,
+                today is the day someone very special
+                came into this world. 🥹❤️
+            </p>
+
+
+            <!-- COUNTDOWN -->
+
+            <div class="countdown-title">
+                🎂 COUNTDOWN TO YOUR BIRTHDAY 🎂
+            </div>
+
+            <div class="countdown">
+
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>DAYS</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>HOURS</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>MINUTES</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>SECONDS</small>
+                </div>
+
+            </div>
+
+            <button
+                class="btn"
+                onclick="goToLetter()">
+                Your Special Letter 💌
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         LETTER
+    ================================================= -->
+
+    <section id="birthdayLetter">
+
+        <div class="section-label">
+            💌 PRIVATE LETTER
+        </div>
+
+        <h2 class="section-title">
+            A Letter For My Gulabo
+        </h2>
+
+
+        <!-- LOCKED LETTER -->
+
+        <div
+            id="letterLocked"
+            class="glass">
+
+            <div class="locked-icon">
+                🔐
+            </div>
+
+            <h3
+                style="
+                color:#ff9edb;
+                font-size:27px;
+                margin-bottom:15px;">
+                Your Letter Is Locked
+            </h3>
+
+            <p>
+                This letter will open only when your
+                birthday begins at exactly
+                <b>12:00 AM</b>. 🎂❤️
+            </p>
+
+            <div id="letterCountdown">
+                Loading...
+            </div>
+
+        </div>
+
+
+        <!-- ACTUAL LETTER -->
+
+        <div
+            id="actualLetter"
+            class="glass">
+
+            <p>
+
+                Happy Birthday, my Gulabo. ❤️
+
+                <br><br>
+
+                I don't know if words will ever be enough
+                to explain how special you are to me.
+
+                But today I just want you to know that
+                having you in my life makes ordinary moments
+                feel a little more beautiful.
+
+                <br><br>
+
+                Your smile, your little talks,
+                your cute moments and simply having you
+                around are some of the things I really love.
+
+                🥹💕
+                
+                <br><br>
+
+                I hope this new year of your life brings
+                you happiness, success, beautiful memories
+                and countless reasons to smile.
+
+                <br><br>
+
+                Never stop being the amazing person you are.
+
+                Keep smiling.
+                Keep shining.
+                And always stay my Gulabo. 🌹
+
+                <br><br>
+
+                Once again...
+
+                <br><br>
+
+                <b>
+                    Happy Birthday,
+                    Jasling Sharma. 🎂❤️
+                </b>
+
+                <br><br>
+
+                With lots of love,
+
+                <br>
+
+                <b>
+                    Anupam ❤️
+                </b>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         MEMORIES
+    ================================================= -->
+
+    <section>
+
+        <div class="section-label">
+            📸 OUR MEMORIES
+        </div>
+
+        <h2 class="section-title">
+            Little Moments
+        </h2>
+
+        <div class="gallery">
+
+            <div class="photo">
+                <img
+                    src="4.png"
+                    alt="Memory 1">
+            </div>
+
+            <div class="photo">
+                <img
+                    src="3.png"
+                    alt="Memory 2">
+            </div>
+
+            <div class="photo">
+                <img
+                    src="0.png"
+                    alt="Memory 3">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         WHY SPECIAL
+    ================================================= -->
+
+    <section>
+
+        <div class="section-label">
+            🌹 JUST FOR YOU
+        </div>
+
+        <h2 class="section-title">
+            Why You're Special
+        </h2>
+
+        <div class="reasons">
+
+            <div class="reason">
+
+                <div class="reason-icon">
+                    😊
+                </div>
+
+                <h3>
+                    Your Smile
+                </h3>
+
+                <p>
+                    Your smile has a special way of making
+                    everything feel a little better.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="reason-icon">
+                    🌹
+                </div>
+
+                <h3>
+                    My Gulabo
+                </h3>
+
+                <p>
+                    There is a reason I call you Gulabo.
+                    You are someone truly special to me.
+                </p>
+
+            </div>
+
+
+            <div class="reason">
+
+                <div class="reason-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Your Presence
+                </h3>
+
+                <p>
+                    Even an ordinary moment becomes special
+                    when you're around.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         FINAL SURPRISE
+    ================================================= -->
+
+    <section>
+
+        <div class="surprise">
+
+            <div class="section-label">
+                🎁 ONE LAST THING
+            </div>
+
+            <h2 class="section-title">
+                I Have A Surprise
+            </h2>
+
+            <div class="cake">
+                🎂
+            </div>
+
+            <button
+                class="btn"
+                onclick="showSurprise()">
+                Open The Gift 💝
+            </button>
+
+
+            <div
+                id="finalSurprise">
+
+                <div class="glass">
+
+                    <div class="final-title">
+                        Happy Birthday
+                        <br>
+                        My Gulabo ❤️🌹
+                    </div>
+
+                    <br>
+
+                    <p>
+                        I hope this little surprise
+                        made you smile. 🥹
+
+                        <br><br>
+
+                        You deserve happiness,
+                        beautiful memories and
+                        countless reasons to smile.
+
+                        <br><br>
+
+                        Stay happy.
+                        Stay amazing.
+                        And keep smiling, Gulabo. ❤️
+
+                        <br><br>
+
+                        With lots of love,
+
+                        <br>
+
+                        <b>
+                            Anupam ❤️
+                        </b>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        Made with <span>❤️</span>
+        by Anupam for Gulabo
+        <br><br>
+        © 2026
+    </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
